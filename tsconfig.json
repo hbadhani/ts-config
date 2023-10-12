@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+      "target": "ES2020",
+      "module": "ES2020",
+      "strict": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "importHelpers": true,
+      "allowSyntheticDefaultImports": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "moduleResolution": "node",
+      "experimentalDecorators": true,
+      "declaration": true, // Generates .d.ts files from your TypeScript files. Unless you're writing a library that others will consume, you may not need to generate .d.ts files.
+      "declarationMap": true,
+      "incremental": true,
+      "useUnknownInCatchVariables": false,
+      "sourceMap": true,
+      "inlineSources": true,
+      /** 
+        The lib option in the tsconfig.json file specifies a list of libraries for the TypeScript compiler to include during the compilation process.
+        By including these libraries in your tsconfig.json, you're instructing the TypeScript compiler to include the corresponding .d.ts files that contain these type definitions. 
+        This allows you to write code that uses these APIs and constructs while benefiting from TypeScript's type checking.
+        "es2020": This includes the type definitions for ECMAScript 2020 features, such as BigInt, Promise.allSettled(), and optional chaining (?.). 
+                By specifying this, you're telling TypeScript to assume that your target runtime environment supports these features, allowing you to use them in your code without any type errors.
+        "dom": This includes type definitions for DOM (Document Object Model) manipulation in the browser. If you're working on a web project that interacts with the DOM,
+               including this library will provide you with the necessary type definitions for objects like document, window, HTMLElement, and so on.
+        "dom.iterable": This includes iterable DOM collections like NodeList, HTMLCollection, and others, allowing you to use them with constructs like for...of loops.
+      */
+      "lib": ["es2020", "dom", "dom.iterable"],
+      "exclude": ["**/node_modules", "**/*.d.ts"]
+    }
+  }
+  
